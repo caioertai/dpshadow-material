@@ -1,8 +1,20 @@
 *
-  font-family: sans-serif
   box-sizing: border-box
+
+body
   color: #aaa
+  font-family: sans-serif
   line-height: 0
+  background: #EEEEEE
+
+.alert
+  bottom: 0
+  right: 0
+  position: absolute
+  line-height: 1.2
+  font-size: 0.875rem
+  padding: 1rem 4rem 1rem 1rem
+  text-align: left
 
 .dpbox
   text-align: right
@@ -29,77 +41,73 @@
 
 .dpcontainer
   position: relative
-  height: 60rem
+  height: 62rem
   width: 100%
+  margin-bottom: 10rem
+
+
+@mixin dpCalc($n)
+  $s1Y: 4+(($n - 2)*0.181818181818181) + px
+  $s1Blur: 4+(($n - 2)*0.2727272727272727) + px
+  $s1Inset: (2+(($n - 2)*0.181818181818181))*-1 + px
+
+  $s2Y: 2+(($n - 2)*0.6363636363636364) + px
+  $s2Blur: $n + px
+  $s2Inset: ($n - 2)*0.0909090909090909 + px
+
+  $s3Y: 1+(($n - 2)*0.2272727272727273) + px
+  $s3Blur: 5+(($n - 2)*1.136363636363636) + px
+  $s3Inset: ($n - 2)*0.2272727272727273 + px
+
+  box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
+  -moz-box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
+  -webkit-box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
 
 .dp1
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(1)
 .dp2
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(2)
 .dp3
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(3)
 .dp4
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(4)
 .dp5
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(5)
 .dp6
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(6)
 .dp7
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(7)
 .dp8
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(8)
 .dp9
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(9)
 .dp10
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(10)
 .dp11
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(11)
 .dp12
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(12)
 .dp13
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(13)
 .dp14
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(14)
 .dp15
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(15)
 .dp16
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(16)
 .dp17
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(17)
 .dp18
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(18)
 .dp19
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(19)
 .dp20
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(20)
 .dp21
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(21)
 .dp22
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(22)
 .dp23
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
-
+  @include dpCalc(23)
 .dp24
-  box-shadow: 0 3px 5px -1px rgba(0,0,0,.24),0 1px 7px 0 rgba(0,0,0,.3)
+  @include dpCalc(24)
