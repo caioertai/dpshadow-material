@@ -49,24 +49,24 @@ body
 @mixin dpCalc($n)
   @if $n == 1
     $n: 0
-  $s1Y: 4+(($n - 2)*0.181818181818181) + px
-  $s1Blur: 4+(($n - 2)*0.2727272727272727) + px
-  $s1Inset: (2+(($n - 2)*0.181818181818181))*-1 + px
+  $s1Y: round(4+(($n - 2)*0.181818181818181)) + px
+  $s1Blur: round(4+(($n - 2)*0.2727272727272727)) + px
+  $s1Inset: round((2+(($n - 2)*0.181818181818181)))*-1 + px
 
-  $s2Y: 2+(($n - 2)*0.6363636363636364) + px
-  $s2Blur: $n + px
-  $s2Inset: ($n - 2)*0.0909090909090909 + px
+  $s2Y: round(2+(($n - 2)*0.6363636363636364)) + px
+  $s2Blur: round($n) + px
+  $s2Inset: round(($n - 2)*0.0909090909090909) + px
 
-  $s3Y: 1+(($n - 2)*0.2272727272727273) + px
-  $s3Blur: 5+(($n - 2)*1.136363636363636) + px
-  $s3Inset: ($n - 2)*0.2272727272727273 + px
+  $s3Y: round(1+(($n - 2)*0.2272727272727273)) + px
+  $s3Blur: round(5+(($n - 2)*1.136363636363636)) + px
+  $s3Inset: round(($n - 2)*0.2272727272727273) + px
 
   box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
   -moz-box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
   -webkit-box-shadow: 0 $s1Y $s1Blur $s1Inset rgba(0, 0, 0, 0.19), 0 $s2Y $s2Blur $s2Inset rgba(0, 0, 0, 0.118), 0 $s3Y $s3Blur $s3Inset rgba(0, 0, 0, 0.114)
 
 .dp1
-  @include dpCalc(1)
+  @include dpCalc(0)
 .dp2
   @include dpCalc(2)
 .dp3
