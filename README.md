@@ -1,3 +1,3 @@
-# Google Material Design Elevation and Shadow SASS Mixin
+# SASS Mixin for Material Design Elevation and Shadow
 
-A simples SASS mixin for using Google's [guidelines](https://material.io/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android) on elevation and shadow.
+A simples SASS mixin for using Google's following [guidelines]https://material.io/guidelines/material-design/elevation-shadows.html#elevation-shadows-elevation-android on depth.
